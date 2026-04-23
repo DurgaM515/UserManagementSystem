@@ -25,10 +25,6 @@ export default function App() {
     "is_active",
   ]);
   const [searchTerm, setSearchTerm] = useState("");
-  const CardIcon = FaThLarge as unknown as React.FC;
-  const RefreshIcon = FaSync as unknown as React.FC;
-  const ExternalLinkIcon = FiExternalLink as unknown as React.FC;
-  const MaximizeIcon = FiMaximize2 as unknown as React.FC;
   const { notifications, setNotifications, addNotification } = useNotifications();
   const handleOpenNewTab = () => {
     window.open("/users", "_blank");
@@ -55,11 +51,11 @@ export default function App() {
             + Add Record
           </button>
           <button className="edit-icon" onClick={handleOpenNewTab}>
-            <ExternalLinkIcon />
+            <FiExternalLink />
           </button>
 
           <button className="edit-icon" onClick={handleFullScreen}>
-            <MaximizeIcon />
+            <FiMaximize2 />
           </button>
         </div>
       </div>
@@ -80,10 +76,10 @@ export default function App() {
           <button
             className="btn-style"
             onClick={() => setViewMode(viewMode === "card" ? "table" : "card")}>
-            <CardIcon />
+            <FaThLarge />
           </button>
           <button type="button" className="btn-style" onClick={() => window.location.reload()}>
-            <RefreshIcon />
+            <FaSync />
           </button>
           <div className="ms-auto" style={{ minWidth: "250px" }}>
             <input

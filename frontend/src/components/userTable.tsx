@@ -1,7 +1,6 @@
 import {  useEffect, useState } from "react";
 import { deleteUser } from "../api";
 import { User } from "../types";
-import { FaEye, FaEdit, FaTrash  } from "react-icons/fa";
 import AddUserModal from "./AddUserModal";
 import useUsers from "../hooks/useUsers";
 import { columnConfig } from "../types/userColumns";
@@ -50,10 +49,6 @@ export default function UserTable({ refresh, columns, searchTerm, onNotify }: Pr
     loadUsers(); // refresh table after delete
     onNotify?.("User deleted successfully");
   };
-
-  const TrashIcon = FaTrash as unknown as React.FC;
-  const EyeIcon = FaEye as unknown as React.FC;
-  const EditIcon = FaEdit as unknown as React.FC;
 
   return (
     <><table className="styled-table">

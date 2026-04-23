@@ -36,12 +36,6 @@ function Header({ notificationCount, notifications, setNotifications }: Props) {
     window.location.href = "/login";
   };
 
-  const FaBellIcon = FaBell as unknown as React.FC<any>;
-  const Bell = (props: any) => <FaBellIcon {...props} />;
-
-  const FaChevronIcon = FaChevronDown as unknown as React.FC<any>;
-  const Chevron = (props: any) => <FaChevronIcon {...props} />;
-
   return (
     <header
       className="navbar navbar-dark px-4"
@@ -75,7 +69,7 @@ function Header({ notificationCount, notifications, setNotifications }: Props) {
               User Management
             </span>
 
-            <Chevron
+            <FaChevronDown
               style={{
                 fontSize: "12px",
                 transition: "0.2s",
@@ -134,7 +128,7 @@ function Header({ notificationCount, notifications, setNotifications }: Props) {
               alignItems: "center",
             }}
           >
-            <Bell style={{ color: "white", fontSize: "20px" }} />
+            <FaBell style={{ color: "white", fontSize: "20px" }} />
           </button>
 
           {notificationCount > 0 && (
@@ -226,7 +220,7 @@ function Header({ notificationCount, notifications, setNotifications }: Props) {
               Admin
             </span>
 
-            <Chevron
+            <FaChevronDown
               style={{
                 fontSize: "12px",
                 transition: "0.2s",
